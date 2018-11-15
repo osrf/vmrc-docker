@@ -14,4 +14,4 @@ esac
 echo "Pulling the VMRC competition images from dockerhub (with Nvidia support)"
 
 docker pull osrf/vmrc:nvidia_current
-docker pull osrf/vmrc:competitor-base-${ROS_DISTRO}
+# docker pull osrf/vmrc:competitor-base-${ROS_DISTRO}
