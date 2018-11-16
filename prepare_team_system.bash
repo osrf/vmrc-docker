@@ -40,4 +40,4 @@ if [[ $# -lt 1 ]]; then
   exit 1
 fi
 
-${DIR}/vmrc-competitor/build_competitor_image.bash ${TEAM_NAME} ${EXTRA_DOCKER_ARGS}
+${DIR}/competitor/build_competitor_image.bash ${TEAM_NAME} ${EXTRA_DOCKER_ARGS}

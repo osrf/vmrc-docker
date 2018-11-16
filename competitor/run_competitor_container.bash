@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script is used to create and run a docker container from an image
-# (usually from a built vmrc-competitor image).
+# (usually from a built "competitor" image).
 # The script does not expect any arguments, but may use:
 # --- 1) An optional command to execute in the run container. E.g. /bin/bash
 # Example command line usage:
