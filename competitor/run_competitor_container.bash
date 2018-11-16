@@ -10,6 +10,11 @@
 set -e
 set -x
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Load global options.
+. ${DIR}/../global.cfg
+
 # Constants.
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -22,7 +27,7 @@ COMMAND=$2
 CONTAINER="${IMAGE_NAME}-system"
 DOCKER_EXTRA_ARGS=""
 
-NETWORK="vmrc-network"
+NETWORK="${competition_name}-network"
 IP="172.18.0.20"
 SERVER_IP="172.18.0.22"
 

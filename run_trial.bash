@@ -50,15 +50,15 @@ exit 0
 ./kill_containers.bash
 
 # Create the network for the containers to talk to each other.
-./ariac-competitor/ariac_network.bash
+./competitor/create_network.bash
 
 # Start the competitors container and let it run in the background.
 COMPETITOR_IMAGE_NAME="${competition_name}-competitor-${TEAM_NAME}"
-./${competition_name}-competitor/run_competitor_container.bash ${COMPETITOR_IMAGE_NAME} "/run_team_system_with_delay.bash" &
+./competitor/run_competitor_container.bash ${COMPETITOR_IMAGE_NAME} "/run_team_system_with_delay.bash" &
 
 # Start the competition server. When the trial ends, the container will be killed.
 # The trial may end because of time-out, because of completion, or because the user called the
-# /ariac/end_competition service.
+# "end_competition" service.
 ./ariac-server/run_container.bash ${CONTAINER_NAME} ariac/ariac2-server-${ROS_DISTRO}:latest \
   "-v ${TEAM_CONFIG_DIR}:/team_config \
   -v ${COMP_CONFIG_DIR}:/ariac/trial_config \
