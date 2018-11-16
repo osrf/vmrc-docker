@@ -54,7 +54,7 @@ You should see that there is a directory called `example_team` that has the foll
 
 ```
 $ ls team_config/example_team/
-build_team_system.bash  run_team_system.bash
+Dockerfile
 ```
 
 Together these files constitute a submission.
