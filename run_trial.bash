@@ -68,9 +68,9 @@ COMPETITOR_IMAGE_NAME="${competition_name}-competitor-${TEAM_NAME}"
 
 # Copy the ROS log files from the competitor's container.
 echo "Copying ROS log files from competitor container..."
-docker cp --follow-link ariac-competitor-${TEAM_NAME}-system:/root/.ros/log/latest $HOST_LOG_DIR/ros-competitor
+docker cp --follow-link ${competition_name}-competitor-${TEAM_NAME}-system:/root/.ros/log/latest $HOST_LOG_DIR/ros-competitor
 echo -e "${GREEN}OK${NOCOLOR}"
 
-./kill_ariac_containers.bash
+./kill_containers.bash
 
 exit 0
